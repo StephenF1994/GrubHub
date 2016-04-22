@@ -1,0 +1,111 @@
+<!Doctype html>
+
+<html>
+
+<head>
+	<link href = "MealsAppMainPage.css" rel = "stylesheet" type = "text/css"/>
+
+</head>
+
+<body>
+	<header>
+	
+	</header>
+	
+	<div class = "search">
+	
+		<form action ="http://www.example.com/search.php">
+		<input type = "text" name = "search" placeholder = "Search here">
+		<input type = "submit" value = "Search here"/>
+		</form>
+	
+	</div>
+	
+	<div class="buttonclass">
+	
+		<button> <a href = "register.html"> Sign up</button>
+		<button> <a href = "login.html">   Log in </a></button>
+		
+	</div>	
+	
+	<div class ="contactclass">
+		<a href ="#"> Contact Us</a> 
+	</div>
+	
+	<div>
+		<h1> Welcome to (app name)      <img src = "images\example.jpg" height = "40px" width = "40px"  > </img></h1>
+	</div>
+	<br>
+	<div>	
+		<p>
+		This is a website designed by our group for our cs353 software project. The objective of this site is to allow users to browse recipes. 
+		The user can also login which allows them to upvote recipes they like , comment under existing recipes and add recipes of their own.
+		
+	
+		</p>	
+	
+		<p>Please choose from one of the categories below to view recipes </p>
+	</div>
+	<br>
+	
+	<ul>
+		<li> <a href = "#" > Breakfast </a>
+					
+			<ul>
+				<li><a href = "#" > Cooked </a> </li>
+				<li><a href = "#" > Quick </a> </li>
+				<li><a href = "#" > Healthy </a> </li>
+				<li><a href = "#" > Overnight </a> </li>
+			</ul>
+		</li>
+		<li> <a href = "#" > Lunch </a>
+					
+			<ul>
+				<li><a href = "#" > Item1 </a> </li>
+				<li><a href = "#" > Item2 </a> </li>
+				<li><a href = "#" > Item3 </a> </li>
+				<li><a href = "#" > Healthy </a> </li>
+			</ul>
+		</li>
+		<li> <a href = "#" > Snacks </a>
+					
+			<ul>
+				<li><a href = "#" > Item1 </a> </li>
+				<li><a href = "#" > European </a> </li>
+				<li><a href = "#" > Item2 </a> </li>
+				<li><a href = "#" > Healthy </a> </li>
+			</ul>
+		</li>
+		<li> <a href = "#" > Main meals </a>
+			
+			<ul>
+				<li><a href = "#" > Chinese </a> </li>
+				<li><a href = "#" > European </a> </li>
+				<li><a href = "italian.html" > Italian </a> </li>
+				<li><a href = "#" > Indian </a> </li>
+			</ul>
+	
+		</li>
+		<li> <a href = "#" > Drinks </a>
+					
+			<ul>
+				<li><a href = "#" > Smoothies </a> </li>
+				<li><a href = "#" > Juices </a> </li>
+				<li><a href = "#" > Alcoholic </a> </li>
+				<li><a href = "#" > Cocktails </a> </li>
+				<li><a href = "#" > Healthy </a> </li>
+			</ul>
+		</li>
+	</ul>
+	
+
+	
+	<footer>
+	
+	</footer>
+
+
+</body>
+
+</html>
+
