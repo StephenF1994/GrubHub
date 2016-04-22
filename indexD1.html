@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script src='https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+
+ </head>
+ 
+ <div class="jumbotron">
+  
+  <img src="logo1.jpg" alt="mainfood2"  class="pull-left gap-right" style=" border-radius: 25px;border:2px solid #001f4d;width:90px;height:90px;margin-right:20px;">
+   <h1> Grub Hub</h1>
+
+</div>
+<!------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+     <img src="left.jpg" alt="mainfood" id="left">
+    </div>
+<!------------------------------------------------------------------------>	
+    <div class="col-sm-8"> 
+    	<div id="section">	
+		<h1>Find recipe</p>
+	
+				<div id="mealResults" hidden=true;>
+					<button id="mainSearchBack" type="button" onclick="mainSearchBack()">Back</button><br><br>
+					<br><!--<textarea id="textMeal" ></textarea>-->
+					<div id="results">
+					</div>
+
+					</div>
+		<div id="main">			
+					
+				
+				<div class = "search"  >
+					<input id="sea" type = "text" name = "search" placeholder = "Search here"><br><br>
+					<button id="sub" onclick="fullSearch()">Search </button>
+					<button id="addrecipe" onclick="checkToAdd()">+ Add Recipe </button>
+					
+				</div><br>
+				
+				<div class = "inline">
+
+					<button id="Login" onclick="goLogin()">Log In</button>
+					<button id="Register" onclick="goRegister()">Sign Up</button>
+					<button id="Logout" onclick="goLogout()">Log Out</button>
+
+				</div><br><br><br>
+					
+	            <div class="dropdown">
+				<button class="downmenu" type="button" data-toggle="dropdown">Breakfast
+					<span class="caret"></span></button> 
+					<ul class="dropdown-menu">   
+						<li><a href="#" onclick="searchBreakfastCooked()">Cooked</a></li>
+						<li><a href="#" onclick="searchBreakfastCold()">Cold</a></li>
+						<li><a href="#" onclick="searchBreakfastHealthy()">Healthy</a></li>
+						<li><a href="#" onclick="searchBreakfastOvernight()">Overnight</a></li>
+						</li>
+					</ul>
+				</div><br>
+				 <div class="dropdown" >
+					<button class="downmenu" type="button" data-toggle="dropdown">Lunch
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+					<li><a href="#" onclick="searchLunchHot()">Hot</a></li>
+					<li><a href="#" onclick="searchLunchCold()">Cold</a></li>
+					<li><a href="#" onclick="searchLunchHealthy()">Healthy</a></li>
+					</ul>
+				</div><br>
+				 <div class="dropdown">
+					<button class="downmenu" type="button" data-toggle="dropdown">Snack
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu" >
+					<li><a href="#" onclick="searchSnackHot()">Hot</a></li>
+					<li><a href="#" onclick="searchSnackCold()">Cold</a></li>
+					<li><a href="#" onclick="searchSnackHealthy()">Healthy</a></li>
+					</ul>
+				</div><br>
+				<div class="dropdown">
+					<button class="downmenu" type="button" data-toggle="dropdown">Main Meals
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu" >
+					<li><a href="#" onclick="searchMainChinese()">Chinese</a></li>
+					<li><a href="#" onclick="searchMainIndian()">Indian</a></li>
+					<li><a href="#" onclick="searchMainEuropean()">European</a></li>
+					<li><a href="#" onclick="searchMainItalian()">Italian</a></li>
+					</ul>
+				</div><br>
+				<div class="dropdown">
+					<button class="downmenu" type="button" data-toggle="dropdown">Drinks
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu" >
+					<li><a href="#" onclick="searchDrinksCold()">Cold</a></li>
+					<li><a href="#" onclick="searchDrinksHot()">Hot</a></li>
+					<li><a href="#" onclick="searchDrinksAlcoholic()">Alcoholic</a></li>
+					</ul>
+				</div><br>
+				
+			</div>
+	
+		
+      </div>
+	 </div>
+	
+<!------------------------------------------------------------------------>
+    <div class="col-sm-2 sidenav">
+      <img src="right.jpg" alt="mainfood" id="right">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>project CS353C</p>
+</footer>
+   
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+ </head>
+ 
+ <body onload="displayLoad()">
+ <div class="jumbotron">
+  
+  <img src="logo1.jpg" alt="mainfood2"  class="pull-left gap-right" style=" border-radius: 25px;border:2px solid #001f4d;width:90px;height:90px;margin-right:20px;">
+  <h1> Grub Hub</h1>
+
+</div>
+
+<!------------------------------------------------------------------------>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+     <img src="left.jpg" class="img-responsive"alt="mainfood" id="left">
+    </div>
+<!------------------------------------------------------------------------>	
+    <div class="col-sm-8 text-left"> 
+
+    	<div id="section">
+		<button class="button button1" onClick="videoFun()">Video</button>
+		<button class="button button2" onClick="methodFun()">Method</button>
+		<button class="button button3" onClick="costFun()">Cost</button>
+		<button class="button button4"onClick="rateFun()">Comments</button>
+		<button class="button button5"onClick="ingredientsFun()">Ingredients</button>
+		<button class="button button5"onClick="window.location.href='mainscreen.html'">HOME</button>
+	     
+		<h2 id="meal"> </h2>
+		<button id="button11" onClick="commentFun()">add comment</button>
+		<button id="button22" onClick="addrateFun()">add rate</button>
+		
+		<div id="main">
+		
+			<br><img id="foodImg" src="sea.jpg" alt="mainfood3" style="width:350px; height:300px;">
+			<div id="result" style="overflow-y: scroll;">
+			</div>
+				
+		</div>
+      </div>
+	 </div>
+	
+<!------------------------------------------------------------------------>
+    <div class="col-sm-2 sidenav">
+      <img src="right.jpg" alt="mainfood" id="right">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>project CS353C</p>
+</footer>
+   
+
+</body>
+</html>
