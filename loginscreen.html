@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
+ </head>
+
+</head>
+
+<body>
+<div class="container"> 
+	<div class="row">
+			<a href="mainscreen.html">
+			<button id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;">
+			</button></a>
+  
+	<div class="col-sm-1"></div>
+	
+    <div class="col-sm-10">
+		<div class="loginview">
+	
+			<p><br><br>
+					This is a website designed by our group for our cs353 software project. The objective of this site is to allow users to browse recipes. 	
+					The user can also login which allows them to upvote recipes they like , comment under existing recipes and add recipes of their own.
+			</p><br><br>	
+				<fieldset class="text-center">					
+						Email: <br><input type="text" id="uEmail" style="color:black;" ><br><br>
+						Password:<br><input type="text" id="uPass" style="color:black;"><br><br>
+					<button id="login" onClick="goStart()">Log in</button>
+					<button id="signin" onClick="location.href='registrationscreen.html'">Sign in</button>
+					<button id="enter" onClick="location.href='mainscreen.html'">Enter</button>
+						<br>
+						<p></p>
+						<p><a href="mailto:luiza.salek@gmail.com" target="_top">Contact us</a></p>
+				</fieldset> 
+		</div>
+	</div>	  
+	
+    <div class="col-sm-1"> </div>
+	</div>
+</div>
+</body>
+</html>

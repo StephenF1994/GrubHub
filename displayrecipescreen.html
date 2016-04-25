@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Grub Hub</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+ </head>
+
+ <body onload="displayLoad()">
+
+<div class="container"> 
+<div class="row">
+			<a href="mainscreen.html">
+			<button id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;">
+			</button></a>
+
+   <div class="col-sm-1"></div>
+	
+    <div class="col-sm-10">
+	  <div class="displayview">
+	
+     
+		<button class="button button1" onClick="videoFun()">Video</button>
+		<button class="button button2" onClick="methodFun()">Method</button>
+		<button class="button button3" onClick="costFun()">Cost</button>
+		<button class="button button4"onClick="rateFun()">Comments</button>
+		<button class="button button5"onClick="ingredientsFun()">Ingredients</button>
+		<button class="button button5"onClick="window.location.href='mainscreen.html'">HOME</button><br><br>
+	    <button id="button11" onClick="commentFun()">add comment</button>
+		<button id="button22" onClick="addrateFun()">add rate</button>
+		
+		<h2 id="meal"></h2>			
+		
+		<img id="foodImg" src="sea.jpg" alt="mainfood3" style="width:450px; height:400px;">
+				<br><br>
+				
+			<div id="result">
+			</div>
+				<br><br><br>
+			<iframe id="movieShow" width="480" height="330">
+</iframe>
+		</div>
+	</div>
+	
+    <div class="col-sm-1"> 
+     </div>
+  </div>
+  </div>
+</body>
+</html>
