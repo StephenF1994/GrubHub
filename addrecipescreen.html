@@ -19,19 +19,19 @@
 	<div class="row">
   
 			<a href="mainscreen.html">
-			<button id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;">
-			</button></a>
+			<div id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;">
+			</div></a>
   
-		<div class="col-sm-1"> </div>
+		<div class="col-sm-2"> </div>
 	
-		<div class="col-sm-10"><br>
+		<div class="col-sm-8"><br>
 			<div class="add">
 			
 				<h1>Add Recipe</h1>
 					<P></p>
 					<p>Please fill out the details below for your recipe</p>
 					<br>
-					Meal:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <select id="Type"onchange="typefunction()">
+					Meal: <select id="Type"onchange="typefunction()">
 						<option value="Breakfast">Breakfast</option>
 						<option value="Lunch">Lunch</option>
 						<option value="MainMeal">Main</option>
@@ -39,39 +39,39 @@
 						<option value="Drinks">Drinks</option>
 						</select><br>
 
-					Type : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <select id="subcat" onchange="typefunction()">
+					Type : <select id="subcat" onchange="typefunction()">
 						<option id="cat1" value="Cold">Hot</option>
 						<option id="cat2" value="Hot">Cold</option>
 						<option id="cat3" hidden=true; value="European"></option>
 						<option id="cat4" hidden=true; value="Indian"></option>
 						</select><br>
 			
-					Recipe :&nbsp &nbsp &nbsp &nbsp &nbsp   <input id="Recipe" type="text" onchange="typefunction()"value="Please enter recipe name here"><br>
+					Recipe : <input id="Recipe" class="form=control" type="text" onchange="typefunction()"value="Please enter recipe name here"><br>
 					
-					Cooking Time: <input id="time" type="text" onchange="typefunction()"value="no time"><br>
+					Cooking Time: <input id="time" class="form=control" type="text" onchange="typefunction()"value="no time"><br>
 					
-					Cost:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <input id="cost" type="text" onchange="typefunction()" value="€"><br>
+					Cost:<input id="cost" class="form=control" type="text" onchange="typefunction()" value="€"><br>
 					
-					Link to Video: <input id="video" type="text" onchange="typefunction()"value="http:youtube.com/"><br>
+					Link to Video: <input id="video" class="form=control" type="text" onchange="typefunction()"value="http:youtube.com/"><br>
 					<div id="spin"></div><br>
 					
 					Picture: <div class="new_Btn">Select Picture</div><br>
 					<input type="file" accept="image/*" capture="camera" id="file-upload">
 					  
-					<img class="pano" id="pano" />
+					<img class="img-responsive center-block" id="pano" />
 					<br><br>
 			
 					Ingredients<br>		
-						<textarea id="ingredients">Please enter your ingredients here, each on a new line</textarea><br><br>
+						<textarea id="ingredients" class="form=control" rows="10" >Please enter your ingredients here, each on a new line</textarea><br><br>
 
 					Method:<br>
-						<textarea  id="method">Please enter your method steps here:</textarea><br>
+						<textarea  id="method" class="form=control" rows="15" >Please enter your method steps here:</textarea><br>
 						<input type = "button" id="button" value = "Submit Recipe!" onclick= "submitType()"/>
 		
 			</div>
 		  </div>
 	
-		<div class="col-sm-1"> 
+		<div class="col-sm-2"> 
 		</div>
 	</div>
 </div>
