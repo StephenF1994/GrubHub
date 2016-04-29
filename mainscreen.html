@@ -17,39 +17,35 @@
 <div class="container">    
   <div class="row">
   
-   <button id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;"></button>
+   <div id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;"></div>
   
-    <div class="col-sm-1"> </div>
+    <div class="col-sm-2"> </div>
 	
-   <div class="col-sm-10"> 
-   <div class="mainf"> 
+   <div class="col-sm-8"> 
+   <div class="mainf">
+
+					<button id="Login" onclick="goLogin()" class="btn btn-success ">Log In</button>
+					<button id="Register" onclick="goRegister()"class="btn btn-success ">Sign Up</button>
+					<button id="Logout" onclick="goLogout()"class="btn btn-success ">Log Out</button><br><br>
     		
 		<h1>Find recipe</h1>
 	
 				<div id="mealResults" hidden=true;>
-					<button id="mainSearchBack" type="button" onclick="mainSearchBack()">Back</button><br><br>
-					<br><!--<textarea id="textMeal" ></textarea>-->
+					<button id="mainSearchBack" type="button" onclick="mainSearchBack()"class="btn btn-primary" >Back</button><br><br>
+					<br><!--<textarea id="textMeal"class="form-control" ></textarea>-->
 					<div id="results">
 					</div>
                </div>
 			   
 				<div id="main">
 				<div class = "search"  >
-					<input id="sea" type = "text" name = "search" placeholder = "Search here"><br><br>
-					<button id="sub" type="submit" onclick="fullSearch()">Search </button>
-					<button id="addrecipe" onclick="window.location.href='addrecipescreen.html'">+ Add Recipe </button>				
-				</div><br>
+					<input id="sea" type = "text" name = "search" placeholder = "Search here" class="form-control"><br><br>
+					<button id="sub" type="submit" onclick="fullSearch()" class="btn btn-warning" >Search </button>
+					<button id="addrecipe" onclick="window.location.href='addrecipescreen.html'" class="btn btn-warning" >+ Add Recipe </button>				
+				</div><br><br>
 				
-				<div class = "inline">
-
-					<button id="Login" onclick="goLogin()">Log In</button>
-					<button id="Register" onclick="goRegister()">Sign Up</button>
-					<button id="Logout" onclick="goLogout()">Log Out</button>
-
-				</div><br><br><br>
-					
 	            <div class="dropdown">
-				<button class="downmenu" type="button" data-toggle="dropdown">Breakfast
+				<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Breakfast
 					<span class="caret"></span></button> 
 					<ul class="dropdown-menu">   
 						<li><a href="#" onclick="searchBreakfastCooked()">Cooked</a></li>
@@ -60,7 +56,7 @@
 					</ul>
 				</div><br>
 				 <div class="dropdown" >
-					<button class="downmenu" type="button" data-toggle="dropdown">Lunch
+					<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Lunch
 					<span class="caret"></span></button>
 					<ul class="dropdown-menu">
 					<li><a href="#" onclick="searchLunchHot()">Hot</a></li>
@@ -69,7 +65,7 @@
 					</ul>
 				</div><br>
 				 <div class="dropdown">
-					<button class="downmenu" type="button" data-toggle="dropdown">Snack
+					<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Snack
 					<span class="caret"></span></button>
 					<ul class="dropdown-menu" >
 					<li><a href="#" onclick="searchSnackHot()">Hot</a></li>
@@ -78,7 +74,7 @@
 					</ul>
 				</div><br>
 				<div class="dropdown">
-					<button class="downmenu" type="button" data-toggle="dropdown">Main Meals
+					<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Main Meals
 					<span class="caret"></span></button>
 					<ul class="dropdown-menu" >
 					<li><a href="#" onclick="searchMainChinese()">Chinese</a></li>
@@ -88,7 +84,7 @@
 					</ul>
 				</div><br>
 				<div class="dropdown">
-					<button class="downmenu" type="button" data-toggle="dropdown">Drinks
+					<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Drinks
 					<span class="caret"></span></button>
 					<ul class="dropdown-menu" >
 					<li><a href="#" onclick="searchDrinksCold()">Cold</a></li>
@@ -102,7 +98,7 @@
 	</div>
 	
 		
-    <div class="col-sm-1"> 
+    <div class="col-sm-2"> 
     </div>
   
 	</div>
