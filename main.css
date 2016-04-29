@@ -167,7 +167,7 @@ body{
   width:120px;
   background-color:#8A1C16;
   color:white ;
-  font-size:13px;
+  font-size:15px;
   font-family:'Comic Sans MS', cursive, sans-serif;
   }
  
@@ -175,7 +175,7 @@ body{
   width:120px;
   background-color:#8A1C16;
   color:white ;
-  font-size:13px;
+  font-size:15px;
   font-family:'Comic Sans MS', cursive, sans-serif;    
   }
 #signin{
@@ -217,14 +217,7 @@ body{
 	height:30px;
 	 font-size: 20px;
 }
-#Login,#Register,#Logout {
-	width:150px;
-	font-size:20px;
-}
-#addrecipe, #sub{
-	width:190px;
-	font-size:20px;	
-}
+
 
 #Login,#Register,#Logout {
 	width:150px;
@@ -259,9 +252,7 @@ color: initial;
 #file_upload{
       width:100px;
 	 height:100px;}
-#pano{
-	 }
-}
+
 
 
 
