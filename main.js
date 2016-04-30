@@ -31,7 +31,7 @@ function methodFun() {
 		}
        
 	});
-	var words=met.split(',');
+	var words=met.split("\n");
 	for(i in words)
 	{
 		div.innerHTML+="<br>"+words[i];
@@ -291,7 +291,8 @@ else if(meth=="" || meth=="Please enter your method steps here:")
 else
 {
 	var words=ing.split("\n");
-	var mets=meth.split("\n");
+	//var mets=meth.split("\n");
+	
 	var stamp= new Date().getTime();
 
 	myFirebaseRef.push({
@@ -299,7 +300,7 @@ else
 		category: (""+subcat),
 		Recipe: (""+rec),
 		Time: (""+time),
-		Method: (""+mets),
+		Method: (""+meth),
 		Video: (""+vid[1]),
 		Ingredients: (""+words),
 		Rcount: (0), 
