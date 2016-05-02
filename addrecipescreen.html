@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Grub Hub</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  <script src='https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+ </head>
+
+<body onload="addLoad()">
+<div class="container">    
+	<div class="row">
+  
+			<a href="mainscreen.html">
+			<div id="logoview"><img src="logo2.jpg" alt="mainfood2"  style="width:400px; hight:200px;">
+			</div></a>
+  
+		<div class="col-sm-2"> </div>
+	
+		<div class="col-sm-8"><br>
+			<div class="add">
+			
+				<h1>Add Recipe</h1>
+					<P></p>
+					<p>Please fill out the details below for your recipe</p>
+					<br>
+					Meal: <select id="Type"onchange="typefunction()">
+						<option value="Breakfast">Breakfast</option>
+						<option value="Lunch">Lunch</option>
+						<option value="MainMeal">Main</option>
+						<option value="Snack">Snack</option>
+						<option value="Drinks">Drinks</option>
+						</select><br>
+
+					Type : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <select id="subcat" onchange="typefunction()">
+						<option id="cat1" value="Cooked">Cooked</option>
+						<option id="cat2" value="Cold">Cold</option>
+						<option id="cat3" value="Healthy">Healthy</option>
+						<option id="cat4" value="Overnight">Overnight</option>
+						<option id="cat5" hidden=true; value="Vegetarian">Vegetarian</option>
+						</select><br>
+			
+					Recipe : <input id="Recipe" class="form-control" type="text" onchange="typefunction()"value="Please enter recipe name here"><br>
+					
+					Cooking Time: <input id="time" class="form-control" type="text" onchange="typefunction()"value="no time"><br>
+					
+					Cost:<input id="cost" class="form-control" type="text" onchange="typefunction()" value="€"><br>
+					
+					Link to Video: <input id="video" class="form-control" type="text" onchange="typefunction()"value="http:youtube.com/"><br>
+					<div id="spin"></div><br>
+					
+					Picture: <div class="new_Btn">Select Picture</div><br>
+					<input type="file" accept="image/*" capture="camera" id="file-upload">
+					  
+					<img class="img-responsive center-block" id="pano" />
+					<br><br>
+			
+					Ingredients<br>		
+						<textarea id="ingredients" class="form-control" rows="10" >Please enter your ingredients here, each on a new line</textarea><br><br>
+
+					Method:<br>
+						<textarea  id="method" class="form-control" rows="15" >Please enter your method steps here:</textarea><br>
+						<input type = "button" id="button" value = "Submit Recipe!" onclick= "submitType()"/>
+		
+			</div>
+		  </div>
+	
+		<div class="col-sm-2"> 
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
