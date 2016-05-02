@@ -208,13 +208,17 @@ var sub1=document.getElementById("cat1");
 var sub2=document.getElementById("cat2");
 var sub3=document.getElementById("cat3");
 var sub4=document.getElementById("cat4");
+var sub5=document.getElementById("cat5");
 switch(type){
 case "Breakfast": {
 sub1.innerHTML="Cooked";
 sub1.value="Cooked";
 sub2.innerHTML="Cold"; sub2.value="Cold";
-sub3.hidden=true;
-sub4.hidden=true;
+sub3.innerHTML="Healthy"; sub3.value="Healthy";
+sub4.innerHTML="Overnight"; sub4.value="Overnight";
+sub3.hidden=false;
+sub4.hidden=false;
+sub5.hidden=true;
 break;
 }
 case "Lunch": {
@@ -223,23 +227,27 @@ sub2.innerHTML="Cold"; sub2.value="Cold";
 sub3.innerHTML="Healthy"; sub3.value="Healthy";
 sub3.hidden=false;
 sub4.hidden=true;
+sub5.hidden=true;
 break;
 }
 case "MainMeal": {
-sub1.innerHTML="European"; sub1.value="European";
-sub2.innerHTML="Italian"; sub2.value="Italian";
-sub3.innerHTML="Chinese"; sub3.value="Chinese";
-sub4.innerHTML="Indian"; sub4.value="Indian";
+sub1.innerHTML="Beef"; sub1.value="Beef";
+sub2.innerHTML="Poultry"; sub2.value="Poultry";
+sub3.innerHTML="Pork"; sub3.value="Pork";
+sub4.innerHTML="Seafood"; sub4.value="Seafood";
+sub5.innerHTML="Vegetarian"; sub5.value="Vegetarian";
 sub3.hidden=false;
 sub4.hidden=false;
+sub5.hidden=false;
 break;
 }
 case "Drinks": {
-sub1.innerHTML="Alcholic"; sub1.value="Alcoholic";
+sub3.innerHTML="Alcoholic"; sub3.value="Alcoholic";
 sub2.innerHTML="Cold"; sub2.value="Cold";
-sub3.innerHTML="Hot"; sub3.value="Hot";
+sub1.innerHTML="Hot"; sub1.value="Hot";
 sub3.hidden=false;
 sub4.hidden=true;
+sub5.hidden=true;
 break;
 }
 case "Snack": {
@@ -248,14 +256,16 @@ sub2.innerHTML="Cold"; sub2.value="Cold";
 sub3.innerHTML="Healthy"; sub3.value="Healthy";
 sub3.hidden=false;
 sub4.hidden=true;
+sub5.hidden=true;
 break;
 }
 default: {
 sub1.innerHTML="Cooked"; sub1.value="Cooked";
 sub2.innerHTML="Cold"; sub2.value="Cold";
-sub3.hidden=true;}
+sub3.hidden=true;
 sub4.hidden=true;
 break;
+}
 }
 }
 var imgSrc="";
@@ -578,7 +588,7 @@ function searchSnackHealthy() {
 	setTimeout("checkEmpty()",5000)
 }
 
-function searchMainChinese() {
+function searchMainBeef() {
 	var myFirebaseRef = new Firebase("https://blazing-heat-4990.firebaseio.com/");
 	var div= document.getElementById("main");
 	div.hidden=true;
@@ -590,7 +600,7 @@ function searchMainChinese() {
 	restext.innerHTML="";
 	
 	myFirebaseRef.orderByChild("Type").on("child_added", function(snapshot) {
-		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Chinese")
+		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Beef")
 		{
 			restext.innerHTML+=("<a href="+"displayrecipescreen.html?recipe="+snapshot.key()+">"+snapshot.val().Recipe + "</a>, has a " + snapshot.val().Rating + " rating.<br>");	
 		}
@@ -599,7 +609,7 @@ function searchMainChinese() {
 	setTimeout("checkEmpty()",5000)
 }
 
-function searchMainEuropean() {
+function searchMainPoultry() {
 	var myFirebaseRef = new Firebase("https://blazing-heat-4990.firebaseio.com/");
 	var div= document.getElementById("main");
 	div.hidden=true;
@@ -611,7 +621,7 @@ function searchMainEuropean() {
 	restext.innerHTML="";
 	
 	myFirebaseRef.orderByChild("Type").on("child_added", function(snapshot) {
-		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="European")
+		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Poultry")
 		{
 			restext.innerHTML+=("<a href="+"displayrecipescreen.html?recipe="+snapshot.key()+">"+snapshot.val().Recipe + "</a>, has a " + snapshot.val().Rating + " rating.<br>");	
 		}
@@ -620,7 +630,7 @@ function searchMainEuropean() {
 	setTimeout("checkEmpty()",5000)
 }
 
-function searchMainIndian() {
+function searchMainPork() {
 	var myFirebaseRef = new Firebase("https://blazing-heat-4990.firebaseio.com/");
 	var div= document.getElementById("main");
 	div.hidden=true;
@@ -632,7 +642,7 @@ function searchMainIndian() {
 	restext.innerHTML="";
 	
 	myFirebaseRef.orderByChild("Type").on("child_added", function(snapshot) {
-		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Indian")
+		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Pork")
 		{
 			restext.innerHTML+=("<a href="+"displayrecipescreen.html?recipe="+snapshot.key()+">"+snapshot.val().Recipe + "</a>, has a " + snapshot.val().Rating + " rating.<br>");	
 		}
@@ -641,7 +651,7 @@ function searchMainIndian() {
 	setTimeout("checkEmpty()",5000)
 }
 
-function searchMainItalian() {
+function searchMainSeafood() {
 	var myFirebaseRef = new Firebase("https://blazing-heat-4990.firebaseio.com/");
 	var div= document.getElementById("main");
 	div.hidden=true;
@@ -653,7 +663,28 @@ function searchMainItalian() {
 	restext.innerHTML="";
 	
 	myFirebaseRef.orderByChild("Type").on("child_added", function(snapshot) {
-		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Italian")
+		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Seafood")
+		{
+			restext.innerHTML+=("<a href="+"displayrecipescreen.html?recipe="+snapshot.key()+">"+snapshot.val().Recipe + "</a>, has a " + snapshot.val().Rating + " rating.<br>");	
+		}
+       
+});
+	setTimeout("checkEmpty()",5000)
+}
+
+function searchMainVegetarian() {
+	var myFirebaseRef = new Firebase("https://blazing-heat-4990.firebaseio.com/");
+	var div= document.getElementById("main");
+	div.hidden=true;
+	var but= document.getElementById("mainSearchBack");
+	but.hidden=false;
+	var resDiv=document.getElementById("mealResults");
+	resDiv.hidden=false;
+	var restext=document.getElementById("results");
+	restext.innerHTML="";
+	
+	myFirebaseRef.orderByChild("Type").on("child_added", function(snapshot) {
+		if(snapshot.val().Type=="MainMeal" && snapshot.val().category=="Vegetarian")
 		{
 			restext.innerHTML+=("<a href="+"displayrecipescreen.html?recipe="+snapshot.key()+">"+snapshot.val().Recipe + "</a>, has a " + snapshot.val().Rating + " rating.<br>");	
 		}
