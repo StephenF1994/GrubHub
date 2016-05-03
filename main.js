@@ -3,7 +3,7 @@ function videoFun() {
 	document.getElementById("result").innerHTML="";
 	var queryString=window.location.search;
 	var parts = queryString.split('=');
-	var mov="http://www.youtube.com/embed/";
+	var mov="https://www.youtube.com/embed/";
 	myFirebaseRef.orderByChild("Type").on("child_added", function(snapshot) {
 		if(snapshot.key()==parts[1]){
 			mov+=(snapshot.val().Video);
